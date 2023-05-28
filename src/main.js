@@ -1,6 +1,6 @@
 import React from "react";
 import './index.css'
-import 'boxicons'
+
 
 
 const Main = () => {
@@ -48,7 +48,7 @@ const Main = () => {
       </div>
   
       <div class="home-sci">
-        <a href="https://github.com/Coder-Jon014" data-social="GitHub"><i class='bx bxl-github bx-tada-hover bx-border-circle'></i></a>
+        <a href="https://github.com/Coder-Jon014" data-social="GitHub"><i class='bx bxl-github bx-tada-hover bx-border-circle' ></i></a>
         <a href="https://www.linkedin.com/in/jon-daniel-c-a3535b134/" data-social="LinkedIn"><i class='bx bxl-linkedin bx-tada-hover bx-border-circle' ></i></a>
         <a href="https://www.behance.net/jon-dancoombs" data-social="Behance"><i class='bx bxl-behance bx-tada-hover bx-border-circle' ></i></a>
         <a href="mailto:jon.coombs14@gmail.com" data-social="Gmail"><i class='bx bxl-gmail bx-tada-hover bx-border-circle'></i></a>

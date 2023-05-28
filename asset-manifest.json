@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/www.jondanielcoombs.tech/static/css/main.ecebbce1.css",
-    "main.js": "/www.jondanielcoombs.tech/static/js/main.8764a867.js",
-    "static/media/profile.png": "/www.jondanielcoombs.tech/static/media/profile.7a9e21e3db40a17aef29.png",
-    "index.html": "/www.jondanielcoombs.tech/index.html",
-    "main.ecebbce1.css.map": "/www.jondanielcoombs.tech/static/css/main.ecebbce1.css.map",
-    "main.8764a867.js.map": "/www.jondanielcoombs.tech/static/js/main.8764a867.js.map"
+    "main.css": "/static/css/main.9bb86500.css",
+    "main.js": "/static/js/main.8764a867.js",
+    "static/media/profile.png": "/static/media/profile.7a9e21e3db40a17aef29.png",
+    "index.html": "/index.html",
+    "main.9bb86500.css.map": "/static/css/main.9bb86500.css.map",
+    "main.8764a867.js.map": "/static/js/main.8764a867.js.map"
   },
   "entrypoints": [
-    "static/css/main.ecebbce1.css",
+    "static/css/main.9bb86500.css",
     "static/js/main.8764a867.js"
   ]
 }

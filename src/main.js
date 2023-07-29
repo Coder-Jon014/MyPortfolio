@@ -35,11 +35,8 @@ const Main = () => {
       <div class="home-content">
         <h1>Hi, I'm Jon-Daniel Coombs</h1>
         <h3 id="role">Frontend Developer </h3>
-        <p>Unleash the power of design! With fiery passion and unwavering drive, I strive to create hassle-free digital
-          products that solve real problems while delivering a satisfying user experience. Join me on this exhilarating
-          journey as we craft practical and captivating designs that push boundaries, leaving users in awe. Get ready to
-          embark on an unforgettable adventure where innovation meets imagination, and together, we'll shape a future
-          filled with delightful and impactful digital experiences. Welcome to a world of limitless possibilities!</p>
+       
+        
   
         <div class="btn-box">
           <a href="https://drive.google.com/file/d/1UGfaVvMBT703eIpE1XNR-xfB1mt4_6tD/view?usp=sharing" target="_blank" rel="noreferrer">Get My CV</a>

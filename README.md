@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Jon-Daniel Coombs Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction and Description
+Welcome to my portfolio website! This is where I showcase my work and projects, share my skills and technologies, and provide a little insight into who I am and what I do.
 
-## Available Scripts
+## Portfolio Sections
+1. Home: The landing page of my portfolio, introducing myself and my background.
+2. About: Learn more about my education, experience, and interests.
+3. Projects: A collection of some of the projects I've worked on.
+4. Contact: Reach out to me through the provided contact information.
 
-In the project directory, you can run:
+## Portfolio Section
+### SolidMeal Project
+![first screen](https://github.com/Coder-Jon014/MyPortfolio/assets/71227832/5f41be85-1712-471c-ad49-ee76c35e2eea)
 
-### `npm start`
+The SolidMeal project is a recipe recommendation app I developed using Flutter and Dart. It offers personalized recipe suggestions based on the user's nutritional preferences. I implemented advanced algorithms like the K-Nearest Neighbors (KNN) algorithm to enhance the user experience. The project demonstrates my proficiency in Flutter, Dart, FlutterFlow, and Firebase, as well as my ability to leverage data analysis to create innovative and personalized solutions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Skills and Technologies
+- HTML & CSS
+- Figma
+- JavaScript
+- React
+- Laravel
+- Adobe Illustrator
+- User Research
+- Adobe Photoshop
+- Flutter
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Contact Information
+- Email: jon.coombs14@gmail.com
+- LinkedIn: [Jon-Daniel Coombs]([link-to-linkedin-profile](https://www.linkedin.com/in/jon-daniel-c-a3535b134/))
+- GitHub: [Coder-Jon014]([link-to-github-profile](https://github.com/Coder-Jon014))
+- Behance: [Jon-Daniel Coombs]([link-to-behance-profile](https://www.behance.net/jon-dancoombs))
 
-### `npm test`
+## Responsive Design
+My portfolio website is currently optimized for devices with a screen resolution of 730 x 850 or higher. I am continuously working on improving its responsiveness for various devices and screen sizes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Feel free to explore my portfolio and get in touch if you have any questions or project inquiries!
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+_This README is subject to updates as my portfolio evolves and new projects are added._

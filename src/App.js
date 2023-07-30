@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
       link.classList.add('active');
     });
   });
-  
+
   // Handle click event for "Home" button
   const homeLink = document.querySelector('.navbar .home');
   if (homeLink) {
@@ -260,7 +260,7 @@ function App() {
 
     <section id="contact" className="Contact">
       <div className="contact-content">
-        <h1 className='contact' data-bg-color = '#000000' data-fg-color='#52cdc9'>“Design is not just what it looks like and feels like. Design is how it works.”</h1>
+        <h1 className='contact' data-bg-color = '#ffff' data-fg-color='#ff0000'>“Design is not just what it looks like and feels like. Design is how it works.”</h1>
       </div>
     </section>
     </div>

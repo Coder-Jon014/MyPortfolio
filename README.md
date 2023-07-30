@@ -11,7 +11,6 @@ Welcome to my portfolio website! This is where I showcase my work and projects, 
 
 ## Portfolio Section
 ### SolidMeal Project
-![SolidMeal Project]
 ![first screen](https://github.com/Coder-Jon014/MyPortfolio/assets/71227832/5f41be85-1712-471c-ad49-ee76c35e2eea)
 
 The SolidMeal project is a recipe recommendation app I developed using Flutter and Dart. It offers personalized recipe suggestions based on the user's nutritional preferences. I implemented advanced algorithms like the K-Nearest Neighbors (KNN) algorithm to enhance the user experience. The project demonstrates my proficiency in Flutter, Dart, FlutterFlow, and Firebase, as well as my ability to leverage data analysis to create innovative and personalized solutions.

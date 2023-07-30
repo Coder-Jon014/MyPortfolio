@@ -2,6 +2,7 @@
 import './App.css';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from 'gsap/all';
 import Lenis from '@studio-freight/lenis'
 import SplitType from 'split-type'
 
@@ -31,15 +32,75 @@ function cycleRoles() {
   }
 }
 
+// Function to handle smooth scrolling to a specific section
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    const offsetTop = section.getBoundingClientRect().top;
+    const headerHeight = document.querySelector('.header').clientHeight;
+    const targetScroll = "+=" + (offsetTop - headerHeight);
+    gsap.to(window, { scrollTo: targetScroll, duration: 1, ease: "power2.inOut" });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   updateRole(); // Show initial role
   intervalId = setInterval(cycleRoles, 4000); // Assign intervalId
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  // GSAP ScrollTrigger
+  // GSAP ScrollTrigger 
   gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollToPlugin);
 
+  // Handle click event for navigation links
+  const navLinks = document.querySelectorAll('.navbar a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const sectionId = link.getAttribute('href').substring(1); // Get the target section ID from the href attribute
+      scrollToSection(sectionId);
+
+      // Update the active status for the navigation buttons
+      navLinks.forEach(navLink => navLink.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+  
+  // Handle click event for "Home" button
+  const homeLink = document.querySelector('.navbar .home');
+  if (homeLink) {
+    homeLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      scrollToSection('home');
+    });
+  }
+
+  // Handle click event for "About" button
+  const aboutLink = document.querySelector('.navbar .about');
+  if (aboutLink) {
+    aboutLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      scrollToSection('about');
+    });
+  }
+
+  // Handle click event for "Project" button
+  const projectLink = document.querySelector('.navbar .project');
+  if (projectLink) {
+    projectLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      scrollToSection('project');
+    });
+  }
+
+  // Handle click event for "Contact" button
+  const contactLink = document.querySelector('.navbar .contact');
+  if (contactLink) {
+    contactLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      scrollToSection('contact');
+    });
+  }
+
+  // GSAP Animations for Quote Section
   const quoteSplitTypes = document.querySelectorAll('.quote')
   quoteSplitTypes.forEach((char, i) => {
     const text = new SplitType(char, { types: 'chars' })
@@ -56,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   })
 
+  // GSAP Animations for Project Section
   const projectSplitTypes = document.querySelectorAll('.project')
   projectSplitTypes.forEach((char, i) => {
     const fg = char.dataset.fgColor
@@ -80,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
       })
   })
 
+  // GSAP Animations for About Section
   const aboutSplitTypes = document.querySelectorAll('.about')
   aboutSplitTypes.forEach((char, i) => {
     const fg = char.dataset.fgColor
@@ -104,8 +167,9 @@ document.addEventListener('DOMContentLoaded', function() {
       })
   })
 
-  const footerSplitTypes = document.querySelectorAll('.footer')
-  footerSplitTypes.forEach((char, i) => {
+  // GSAP Animations for contact Section
+  const contactSplitTypes = document.querySelectorAll('.contact')
+  contactSplitTypes.forEach((char, i) => {
     const fg = char.dataset.fgColor
     const bg = char.dataset.bgColor
     const text = new SplitType(char, { types: 'chars' })
@@ -127,81 +191,76 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       })
   })
+
+    // Lenis section for Smooth Scroll
+  const lenis = new Lenis()
+  lenis.on('scroll', (e) => {
+    console.log(e)
+  })
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+  requestAnimationFrame(raf)
 });
 
 
-
-
-// Lenis section for Smooth Scroll
-const lenis = new Lenis()
-
-lenis.on('scroll', (e) => {
-  console.log(e)
-})
-
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
-
 function App() {
   return (
-    <div className="App">
-       <header class="header">
-      <a href="https://github.com/Coder-Jon014" class="logo"> Jon.</a>
+    <div classNameName="App">
+       <header className="header">
+      <a href="#home" className="logo"> Jon.</a>
   
-      <nav class="navbar">
-        <a href="https://github.com/Coder-Jon014" class="active">Home</a>
-        <a href="https://github.com/Coder-Jon014">About</a>
-        <a href="https://github.com/Coder-Jon014">Projects</a>
-        <a href="https://github.com/Coder-Jon014">Contact</a>
+      <nav className="navbar">
+        <a href="#home" className="active home">Home</a>
+        <a href="#about" className='about'>About</a>
+        <a href="#project" className='project'>Projects</a>
+        <a href="#contact" className='contact'>Contact</a>
       </nav>
     </header>
   
-    <section class="home">
-      {/* <div class="home-image"></div> */}
-      <div class="home-content">
+    <section id="home" classNameName="home">
+      {/* <div className="home-image"></div> */}
+      <div className="home-content">
         <h1>Hi, I'm Jon-Daniel Coombs</h1>
         <h3 id="role">Frontend Developer </h3>
-        <p>A <span class='hero-p'>passionate</span> designer crafting <span class='hero-p'>impactful</span>  digital experiences!</p>
+        <p>A <span className='hero-p'>passionate</span> designer crafting <span className='hero-p'>impactful</span>  digital experiences!</p>
   
-        <div class="btn-box">
+        <div className="btn-box">
           <a href="https://drive.google.com/file/d/1UGfaVvMBT703eIpE1XNR-xfB1mt4_6tD/view?usp=sharing" target="_blank" rel="noreferrer">Get My CV</a>
           <a href="https://github.com/Coder-Jon014" target="_blank" rel="noreferrer">See My Work</a>
         </div>
 
-        <div class="home-sci">
-        <a href="https://github.com/Coder-Jon014" data-social="GitHub" target="_blank" rel="noreferrer"><i class='bx bxl-github bx-tada-hover bx-border-circle' ></i></a>
-        <a href="https://www.linkedin.com/in/jon-daniel-c-a3535b134/" data-social="LinkedIn" target="_blank" rel="noreferrer"><i class='bx bxl-linkedin bx-tada-hover bx-border-circle' ></i></a>
-        <a href="https://www.behance.net/jon-dancoombs" data-social="Behance" target="_blank" rel="noreferrer"><i class='bx bxl-behance bx-tada-hover bx-border-circle' ></i></a>
-        <a href="mailto:jon.coombs14@gmail.com" data-social="Gmail" target="_blank" rel="noreferrer"><i class='bx bxl-gmail bx-tada-hover bx-border-circle'></i></a>
+        <div className="home-sci">
+        <a href="https://github.com/Coder-Jon014" data-social="GitHub" target="_blank" rel="noreferrer"><i className='bx bxl-github bx-tada-hover bx-border-circle' ></i></a>
+        <a href="https://www.linkedin.com/in/jon-daniel-c-a3535b134/" data-social="LinkedIn" target="_blank" rel="noreferrer"><i className='bx bxl-linkedin bx-tada-hover bx-border-circle' ></i></a>
+        <a href="https://www.behance.net/jon-dancoombs" data-social="Behance" target="_blank" rel="noreferrer"><i className='bx bxl-behance bx-tada-hover bx-border-circle' ></i></a>
+        <a href="mailto:jon.coombs14@gmail.com" data-social="Gmail" target="_blank" rel="noreferrer"><i className='bx bxl-gmail bx-tada-hover bx-border-circle'></i></a>
       </div>
       </div>
     </section>
 
-    <section class="Quote">
-      <div class="quote-content">
-        <h1 class='quote'>“Design is not just what it looks like and feels like. Design is how it works.”</h1>
+    <section id="quote" className="Quote">
+      <div className="quote-content">
+        <h1 className='quote'>“Design is not just what it looks like and feels like. Design is how it works.”</h1>
       </div>
     </section>
 
-    <section class="Projects">
-      <div class="project-content">
-        <h1 class='project' data-bg-color = '#000000' data-fg-color='#ffff'>“Design is not just what it looks like and feels like. Design is how it works.”</h1>
+    <section id="project" className="Projects">
+      <div className="project-content">
+        <h1 className='project' data-bg-color = '#000000' data-fg-color='#ffff'>“Design is not just what it looks like and feels like. Design is how it works.”</h1>
       </div>
     </section>
 
-    <section class="About">
-      <div class="about-content">
-        <h1 class='about' data-bg-color = '#000000' data-fg-color='#ffff'>“Design is not just what it looks like and feels like. Design is how it works.”</h1>
+    <section id="about" className="About">
+      <div className="about-content">
+        <h1 className='about' data-bg-color = '#000000' data-fg-color='#ffff'>“Design is not just what it looks like and feels like. Design is how it works.”</h1>
       </div>
     </section>
 
-    <section class="Footer">
-      <div class="footer-content">
-        <h1 class='footer' data-bg-color = '#000000' data-fg-color='#52cdc9'>“Design is not just what it looks like and feels like. Design is how it works.”</h1>
+    <section id="contact" className="Contact">
+      <div className="contact-content">
+        <h1 className='contact' data-bg-color = '#000000' data-fg-color='#52cdc9'>“Design is not just what it looks like and feels like. Design is how it works.”</h1>
       </div>
     </section>
     </div>

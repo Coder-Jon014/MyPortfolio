@@ -6,8 +6,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from 'gsap/all';
 import Lenis from '@studio-freight/lenis'
 import SplitType from 'split-type'
+import  ExpandLessIcon  from '@mui/icons-material/ExpandLess';
+import { Fab } from '@mui/material';
+import Header from './Sections/Header'; 
+import Home from './Sections/Home'; 
+import Project from './Sections/Project';
+import Quote from './Sections/Quote';
+import About from './Sections/About';
+import Contact from './Sections/Contact';
 
-var roles = ["Frontend Developer", "Mobile Developer", "UX Designer"];
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+var roles = ["Frontend Developer", "Mobile Developer", "UX Designer", "Passionate Creator"];
 var index = 0; // Starting index
 var intervalId; // Declare intervalId in a broader scope
 
@@ -232,78 +242,34 @@ document.addEventListener('DOMContentLoaded', function() {
   requestAnimationFrame(raf)
 });
 
+const styles = {
+  goToTopButton: {
+    position: 'fixed',
+    bottom: '20px',
+    right: '20px',
+    zIndex: 1000, // To ensure it's above other content
+    // color: 'white', // Set the color to white
+  },
+};
+
+const scrollToTop = () => {
+  gsap.to(window, { duration: 1, scrollTo: { y: 0 } });
+};
+
 
 function App() {
+  
   return (
     <div className="App">
-       <header className="header">
-        <a href="#home" className="logo"> Jon.</a>
-    
-        <nav className="navbar">
-          <a href="#home" className="active home">Home</a>
-          <a href="#project" className='project'>My Projects</a>
-          <a href="#about" className='about'>About Me</a>
-          <a href="#contact" className='contact'>Contact</a>
-        </nav>
-      </header>
-  
-      <section id="home" className="home">
-        {/* <div className="home-image"></div> */}
-        <div className="home-content">
-          <h1>Hi, I'm Jon-Daniel Coombs</h1>
-          <h3 id="role">Frontend Developer </h3>
-          <p>A <span className='hero-p'>passionate</span> designer crafting <span className='hero-p'>impactful</span>  digital experiences!</p>
-    
-          <div className="btn-box">
-            <a href="https://drive.google.com/uc?export=download&id=1UGfaVvMBT703eIpE1XNR-xfB1mt4_6tD" target="_blank" rel="noreferrer">Get My CV</a>
-            <a href="https://github.com/Coder-Jon014" target="_blank" rel="noreferrer">See My Work</a>
-          </div>
-
-          <div className="home-sci">
-          <a href="https://github.com/Coder-Jon014" data-social="GitHub" target="_blank" rel="noreferrer"><i className='bx bxl-github bx-tada-hover bx-border-circle' ></i></a>
-          <a href="https://www.linkedin.com/in/jon-daniel-c-a3535b134/" data-social="LinkedIn" target="_blank" rel="noreferrer"><i className='bx bxl-linkedin bx-tada-hover bx-border-circle' ></i></a>
-          <a href="https://www.behance.net/jon-dancoombs" data-social="Behance" target="_blank" rel="noreferrer"><i className='bx bxl-behance bx-tada-hover bx-border-circle' ></i></a>
-          <a href="mailto:jon.coombs14@gmail.com" data-social="Gmail" target="_blank" rel="noreferrer"><i className='bx bxl-gmail bx-tada-hover bx-border-circle'></i></a>
-        </div>
-        </div>
-      </section>
-
-      <section id="quote" className="Quote">
-        <div className="quote-content">
-          <h1 className='quote'>“Design is not just what it looks like and feels like. Design is how it works.”</h1>
-        </div>
-      </section>
-
-      <section id="project" className="Projects">
-        <div className="project-content">
-          <h1 className='project' data-bg-color = '#000000' data-fg-color='#ffff'>“Card 1”</h1>
-          <p className='project' data-bg-color = '#000000' data-fg-color='#ffff'>Design is not just what it looks like and feels like. Design is how it works.</p>
-        </div>
-        <div className="project-content">
-          <h1 className='project' data-bg-color = '#000000' data-fg-color='#ffff'>“Card 2”</h1>
-          <p className='project' data-bg-color = '#000000' data-fg-color='#ffff'>Design is not just what it looks like and feels like. Design is how it works.</p>
-        </div>
-        <div className="project-content">
-          <h1 className='project' data-bg-color = '#000000' data-fg-color='#ffff'>“Card 3”</h1>
-          <p className='project' data-bg-color = '#000000' data-fg-color='#ffff'>Design is not just what it looks like and feels like. Design is how it works.</p>
-        </div>
-        <div className="project-content">
-          <h1 className='project' data-bg-color = '#000000' data-fg-color='#ffff'>“Card 4”</h1>
-          <p className='project' data-bg-color = '#000000' data-fg-color='#ffff'>Design is not just what it looks like and feels like. Design is how it works.</p>
-        </div>
-      </section>
-
-      <section id="about" className="About">
-        <div className="about-content">
-          <h1 className='about' data-bg-color = '#000000' data-fg-color='#ffff'>“Design is not just what it looks like and feels like. Design is how it works.”</h1>
-        </div>
-      </section>
-
-      <section id="contact" className="Contact">
-        <div className="contact-content">
-          <h1 className='contact' data-bg-color = '#ffff' data-fg-color='#ff0000'>“Design is not just what it looks like and feels like. Design is how it works.”</h1>
-        </div>
-      </section>
+      <Header />
+      <Home />
+      <Quote />
+      <Project />
+      <About />
+      <Contact />
+      <Fab sx={styles.goToTopButton} onClick={scrollToTop}>
+            <ExpandLessIcon fontSize="large" />
+      </Fab>
     </div>
   );
 }

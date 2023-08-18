@@ -1,19 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
 
-/* body {
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-} */
-
-
+body {
+  background: black;
+  /* overflow: hidden; */
+}
 
 .header {
   position: fixed;
@@ -21,35 +19,46 @@
   left: 0;
   width: 100%;
   padding: 20px;
-  background-color: white transparent;
+  background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  position: relative;
-  font-size: 25px;
-  color: black;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   font-weight: 700;
+  color: white;
 }
 
-.logo::before {
+.logo svg {
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 20px;
+}
+
+
+/* .logo::before {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  background: black;
   animation: showRight 1s ease forwards;
   animation-delay: 0.4s;
-}
+} */
+
 
 .navbar a {
-  font-size: 18px;
-  color: black;
+  font-size: 14px;
+  color: white;
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
@@ -63,21 +72,49 @@
   bottom: -3px; /* Adjust the value to position the line */
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: white;
   transform: scaleX(0); /* Initially set the line width to 0 */
   transform-origin: left; /* Set the origin to the left for scaling effect */
   transition: transform 0.3s ease; /* Add a transition effect */
 }
 
-.navbar a:hover::after,
-.navbar a.active::after {
+.navbar a:hover::after{
+/* .navbar a.active::after { */
   transform: scaleX(1); /* Scale the line width to 100% on hover/active */
 }
+
+.navbar i{
+  color: white;
+}
+
+.container {
+  display: inline-block; /* Ensure the container only takes up necessary space */
+}
+
+.link-text {
+  vertical-align: middle; /* Align the text vertically with the icon */
+}
+
+.icon-container {
+  display: inline-block;
+  opacity: 0; /* Initial opacity */
+  transition: opacity 0.3s ease; /* Add a smooth transition for the fading effect */
+}
+
+.link-text:hover + .icon-container,
+.icon-container:hover{
+  opacity: 1; /* Lower opacity on hover */
+}
+
 
 section {
   height: 100vh;
 }
 
+.text-cursor{
+  user-select: none;
+  cursor: default;
+}
 .home-content {
   display: flex;
   flex-direction: column;
@@ -98,6 +135,7 @@ section {
   line-height: 1.3;
   white-space: nowrap; /* Prevent line breaks */
   text-align: center; /* Horizontally center the text */
+  color: white;
 }
 
 .home-content h1::before {
@@ -107,7 +145,7 @@ section {
   right: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  background: black;
   animation: showRight 1s ease forwards;
   animation-delay: 1s;
 }
@@ -117,6 +155,7 @@ section {
   margin: 15px 0 15px;
   font-size: 32px;
   font-weight: 500;
+  color: white;
 }
 
 .home-content h3::before {
@@ -126,7 +165,7 @@ section {
   right: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  background: black;
   animation: showRight 1s ease forwards;
   animation-delay: 1.3s;
 }
@@ -136,11 +175,17 @@ section {
   margin: 20px 0 40px;
   font-weight: 300;
   font-size: 18px;
-  max-width: 650px;
+  max-width: 850px;
+  color: white;
 }
 
 .home-content p span {
   font-weight: 500;
+}
+
+.home-content p span:hover {
+  color: cyan;
+  cursor: default;
 }
 .home-content p::before {
   content: "";
@@ -149,7 +194,7 @@ section {
   right: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  background: black;
   animation: showRight 1s ease forwards;
   animation-delay: 1.6s;
 }
@@ -169,7 +214,7 @@ section {
   right: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  background: black;
   animation: showRight 1s ease forwards;
   animation-delay: 1.9s;
   z-index: 2;
@@ -183,7 +228,7 @@ section {
   width: 150px;
   height: 100%;
   background: black;
-  border: 3px solid black;
+  border: 3px solid white;
   border-radius: 8px;
   color: white;
   text-decoration: none;
@@ -197,16 +242,6 @@ section {
   color: black;
 }
 
-/* .btn-box a:nth-child(2){
-  background: transparent;
-  color: black;
-}
-.btn-box a:nth-child(2)::before{
-  background: black;  
-}
-.btn-box a:nth-child(2):hover{
-  color: white;
-} */
 .btn-box a::before {
   content: "";
   position: absolute;
@@ -238,7 +273,7 @@ section {
   right: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  background: black;
   animation: showRight 1s ease forwards;
   animation-delay: 2.1s;
   z-index: 2;
@@ -251,10 +286,8 @@ section {
   width: 40px;
   height: 40px;
   background: transparent;
-  /* border: 2px solid black; */
-  /* border-radius: 50%; */
   font-size: 30px;
-  color: black;
+  color: white;
   text-decoration: none;
   transition: transform 0.3s ease;
 }
@@ -270,7 +303,7 @@ section {
   transform: translateX(-50%);
   padding: 5px 12px;
   /* background-color: #000; */
-  color: black;
+  color: white;
   font-size: 14px;
   border-radius: 4px;
   opacity: 0;
@@ -311,7 +344,7 @@ section {
   background-color: #00cc7f;
 }
 
-.Projects{
+.Projects {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 3rem;
@@ -341,7 +374,7 @@ section {
 
 .project-content p {
   display: none;
-  padding: 0 2rem;  
+  padding: 0 2rem;
 }
 
 .project-content.active p {
@@ -349,14 +382,14 @@ section {
   padding: 0 2rem;
 }
 
-.project-content.active{
+.project-content.active {
   grid-column: 1 / span 6;
   grid-row: 1;
   order: 0;
   height: auto;
 }
 
-.project-content.is-inactive{
+.project-content.is-inactive {
   grid-column: span 2;
 }
 
@@ -369,4 +402,21 @@ section {
   height: 100%;
   /* padding: 0 10%; */
   background-color: black;
+}
+
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff1111; /* Thumb color */
+  border-radius: 0px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb color on hover */
 }

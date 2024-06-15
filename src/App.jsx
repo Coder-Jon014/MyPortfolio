@@ -43,30 +43,30 @@ function cycleRoles() {
   }
 }
 
-function activeProjectCards(){
-  const cards = document.querySelectorAll('.project-content')
-  cards.forEach((card, i) => {
-    card.addEventListener('click', () => {
-      // Get State
-      const state = Flip.getState(cards);
+// function activeProjectCards(){
+//   const cards = document.querySelectorAll('.project-content')
+//   cards.forEach((card, i) => {
+//     card.addEventListener('click', () => {
+//       // Get State
+//       const state = Flip.getState(cards);
 
-      // Add active class to flip and inactive to others
-      const isCardActive = card.classList.contains('active');
-      cards.forEach((otherCard, otherIndex) => {
-        otherCard.classList.remove('active');
-        otherCard.classList.remove('is-inactive');
-        if (!isCardActive && otherIndex !== i) otherCard.classList.add('is-inactive');
-      });
-      if (!isCardActive) card.classList.add('active');
+//       // Add active class to flip and inactive to others
+//       const isCardActive = card.classList.contains('active');
+//       cards.forEach((otherCard, otherIndex) => {
+//         otherCard.classList.remove('active');
+//         otherCard.classList.remove('is-inactive');
+//         if (!isCardActive && otherIndex !== i) otherCard.classList.add('is-inactive');
+//       });
+//       if (!isCardActive) card.classList.add('active');
 
-      Flip.from(state, {
-        duration: 1,
-        ease: "expo.out",
-        absolute: true,
-      });
-    });
-  });
-}
+//       Flip.from(state, {
+//         duration: 1,
+//         ease: "expo.out",
+//         absolute: true,
+//       });
+//     });
+//   });
+// }
 
 // Function to handle smooth scrolling to a specific section
 function scrollToSection(sectionId) {
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
   gsap.registerPlugin(ScrollToPlugin);
   gsap.registerPlugin(Flip);
 
-  activeProjectCards(); // Activate project cards
+  // activeProjectCards(); // Activate project cards
   // Handle click event for navigation links
   const navLinks = document.querySelectorAll('.navbar a');
   navLinks.forEach(link => {

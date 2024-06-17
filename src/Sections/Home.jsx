@@ -5,7 +5,7 @@ const Home = () => {
       <div className="home-content">
         <h1>Hi, I'm Jon-Daniel Coombs</h1>
         <h3 id="role"> </h3>
-        <p>I <span className='hero-p'>design</span> and <span className='hero-p'>develop</span> impactful and passionate <span className='hero-p'>experiences</span>  to makes people's lives simple</p>
+        <p>I <span className='hero-p'>design</span> and <span className='hero-p'>develop</span> impactful and passionate <span className='hero-p'>experiences</span>  to make lives simple</p>
 
         <div className="btn-box">
           <a href="https://drive.google.com/uc?export=download&id=1UGfaVvMBT703eIpE1XNR-xfB1mt4_6tD" target="_blank" rel="noreferrer">Download CV</a>

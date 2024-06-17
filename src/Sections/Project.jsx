@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BsArrowDownRight, BsArrowRight } from 'react-icons/bs';
+import { BsArrowDownRight } from 'react-icons/bs';
 
 const projects = [
   { id: 1, title: "Web Development", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et." },
@@ -25,7 +25,7 @@ const Project = () => {
             onMouseEnter={() => setHoveredIcon(project.id)}
             onMouseLeave={() => setHoveredIcon(null)}
           >
-            {hoveredIcon === project.id ? <BsArrowRight /> : <BsArrowDownRight />}
+            <BsArrowDownRight className={hoveredIcon === project.id ? 'rotate-icon' : ''} />
           </div>
           <div className="project-line"></div>
         </div>

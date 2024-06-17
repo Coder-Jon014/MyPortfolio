@@ -186,13 +186,14 @@ section {
 }
 
 .home-content p span {
-  font-weight: 500;
+  font-weight: 900;
+  color: #00ff99;
 }
 
-.home-content p span:hover {
+/* .home-content p span:hover {
   color: cyan;
   cursor: default;
-}
+} */
 .home-content p::before {
   content: "";
   position: absolute;
@@ -404,9 +405,9 @@ section {
 .project-card {
   display: flex;
   align-items: center;
-  width: calc(50% - 30px); /* Adjusted width to make the boxes shorter and fit within gap */
+  width: calc(50% - 100px); /* Adjusted width to make the boxes shorter and fit within gap */
   background-color: #000000;
-  margin-bottom: 10px; /* Reduced margin for tighter packing */
+  margin: 10px; /* Reduced margin for tighter packing */
   padding: 0px 80px 80px 80px; /* Adjusted padding for tighter packing */
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -416,13 +417,14 @@ section {
 }
 
 .project-card:hover {
-  color: #00ff99; /* Change text color to #00ff99 on hover */
+  color: #00ff99;
 }
 
 .project-number {
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 800;
   margin-right: 20px;
+
 }
 
 .project-info {
@@ -432,7 +434,7 @@ section {
 .project-title {
   font-size: 28px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .project-description {
@@ -441,27 +443,38 @@ section {
 
 .project-icon {
   display: flex;
-  font-size: 24px;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
+  font-size: 22px;
   background-color: white;
   color: black; /* Default icon color */
-  transition: color 0.3s ease, transform 3s ease; /* Smooth transition for icon color and transform */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for icon */
 }
 
-.project-card:hover .project-icon {
-  color: #000000; /* Change icon color to black on hover */
-  background-color: #00ff99; /* Change background color to #00cc7f on hover */
+.project-icon svg {
+  transition: transform 0.3s ease; /* Smooth transition for the SVG icon */
+}
+
+.project-icon .rotate-icon {
+  transform: rotate(-45deg); /* Rotate the icon 45 degrees */
+}
+
+.project-icon:hover {
+  background-color: #00cc7f; /* Change background color on hover */
+}
+
+.project-card:hover {
+  color: #00cc7f; /* Change icon color to black on hover */
 }
 
 
 .project-line {
   position: absolute;
   bottom: -5px; /* Position the line slightly below the card */
-  left: 0;
+  left: 0; 
   width: 100%;
   height: .3px;
   background-color: gray;

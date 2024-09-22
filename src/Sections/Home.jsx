@@ -1,4 +1,3 @@
-
 const Home = () => {
   return (
     <section id="home" className="home text-cursor">
@@ -8,7 +7,7 @@ const Home = () => {
         <p>I <span className='hero-p'>design</span> and <span className='hero-p'>develop</span> impactful and passionate <span className='hero-p'>experiences</span>  to make lives simple</p>
 
         <div className="btn-box">
-          <a href="https://drive.google.com/uc?export=download&id=1UGfaVvMBT703eIpE1XNR-xfB1mt4_6tD" target="_blank" rel="noreferrer">Download CV</a>
+          <a href="/Jon-Daniel Coombs.pdf" download>Get My CV</a>
           <a href="https://github.com/Coder-Jon014" target="_blank" rel="noreferrer">See My Work</a>
         </div>
 

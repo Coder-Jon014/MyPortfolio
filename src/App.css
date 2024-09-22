@@ -340,6 +340,11 @@ section {
   background-color: yellow;
 }
 
+.quote{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 .about-content {
   display: flex;
   flex-direction: column;

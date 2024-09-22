@@ -5,7 +5,8 @@ const Quote = () => {
     return(
         <section id="quote" className="Quote">
             <div className="quote-content">
-                <h1 className='quote'>“Design is not just what it looks like and feels like. Design is how it works.”</h1>
+                <h1 className='quote '>“Design is not just what it looks like and feels like. Design is how it works.”</h1>
+                <h1 className='quote '>“This is still under construction. We'll be ready soon.”</h1>
             </div>
         </section>
     );

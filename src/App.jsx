@@ -15,6 +15,7 @@ import Quote from './Sections/Quote';
 import About from './Sections/About';
 import Contact from './Sections/Contact';
 
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 var roles = ["Frontend Developer", "Mobile Developer", "UX Designer", "Passionate Creator"];
@@ -116,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (aboutLink) {
     aboutLink.addEventListener('click', function(event) {
       event.preventDefault();
-      scrollToSection('about');
+      scrollToSection('quote');
     });
   }
 
@@ -125,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (projectLink) {
     projectLink.addEventListener('click', function(event) {
       event.preventDefault();
-      scrollToSection('project');
+      scrollToSection('quote');
     });
   }
 
@@ -138,20 +139,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+
   // GSAP Animations for Quote Section
   const quoteSplitTypes = document.querySelectorAll('.quote')
-  quoteSplitTypes.forEach((char, i) => {
-    const text = new SplitType(char, { types: 'chars' })
-    gsap.from(text.chars, {
+  quoteSplitTypes.forEach((line, i) => {
+    const text = new SplitType(line, { types: 'lines' })
+    gsap.from(text.lines, {
       scrollTrigger: {
-        trigger: char,
-        start: 'top 80%',
+        trigger: line,
+        start: 'top 100%',
         end: 'top 20%',
         scrub: true,
         // markers: true,
       },
       opacity: 0.3,
-      stagger: 0.1,
+      stagger: 0.5,
     })
   })
 
@@ -230,7 +232,8 @@ document.addEventListener('DOMContentLoaded', function() {
       })
   })
 
-    // Lenis section for Smooth Scroll
+
+  // Lenis section for Smooth Scroll
   const lenis = new Lenis()
   lenis.on('scroll', (e) => {
     console.log(e)
@@ -263,8 +266,8 @@ function App() {
     <div className="App">
       <Header />
       <Home />
-      {/* <Quote />
-      <Project />
+      <Quote />
+      {/* <Project />
       <About />
       <Contact />
       <Fab sx={styles.goToTopButton} onClick={scrollToTop}>

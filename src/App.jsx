@@ -263,13 +263,13 @@ function App() {
     <div className="App">
       <Header />
       <Home />
-      <Quote />
+      {/* <Quote />
       <Project />
       <About />
       <Contact />
       <Fab sx={styles.goToTopButton} onClick={scrollToTop}>
             <ExpandLessIcon fontSize="large" />
-      </Fab>
+      </Fab> */}
     </div>
   );
 }

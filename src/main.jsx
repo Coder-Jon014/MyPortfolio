@@ -39,7 +39,7 @@ const Main = () => {
         
   
         <div class="btn-box">
-          <a href="https://utfs.io/f/tMihCq6pdnsZXrOtFQnbprO5v8N39eyzFnfMJjAxuZ7Vi2SQ" target="_blank" rel="noreferrer">Get My CV</a>
+          <a href="/assets/Jon-Daniel Coombs.pdf" download>Get My CV</a>
           <a href="https://github.com/Coder-Jon014">See My Work</a>
         </div>
       </div>

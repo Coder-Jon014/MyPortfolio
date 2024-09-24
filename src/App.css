@@ -139,7 +139,6 @@ section {
   font-size: 56px;
   font-weight: 600;
   line-height: 1.3;
-  white-space: nowrap; /* Prevent line breaks */
   text-align: center; /* Horizontally center the text */
   color: white;
 }

@@ -2,7 +2,9 @@ const Home = () => {
   return (
     <section id="home" className="home text-cursor min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="home-content max-w-3xl mx-auto text-center">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Hi, I'm Jon-Daniel Coombs</h1>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 transition-all duration-300">
+          Hi, I'm Jon-Daniel Coombs
+        </h1>
         <h3 id="role" className="text-xl sm:text-2xl md:text-3xl mb-4"> </h3>
         <p className="text-lg sm:text-xl mb-8">
           I <span className='hero-p'>design</span> and <span className='hero-p'>develop</span> impactful and passionate <span className='hero-p'>experiences</span> to make lives simple

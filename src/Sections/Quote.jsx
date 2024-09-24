@@ -8,7 +8,7 @@ const Quote = () => {
                 <h1 className='quote text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 text-gray-800'>
                     "Design is how it works."
                 </h1>
-                <h1 className='quote text-xl sm:text-2xl md:text-3xl font-semibold text-center text-gray-600'>
+                <h1 className='quote text-xl sm:text-2xl text-center md:text-3xl font-semibold text-gray-600'>
                     "We're still under construction. We'll be ready soon."
                 </h1>
             </div>

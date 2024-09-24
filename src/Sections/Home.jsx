@@ -10,9 +10,9 @@ const Home = () => {
           I <span className='hero-p'>design</span> and <span className='hero-p'>develop</span> impactful and passionate <span className='hero-p'>experiences</span> to make lives simple
         </p>
 
-        <div className="btn-box flex flex-col sm:flex-row justify-center gap-4 mb-8">
-          <a href="/Jon-Daniel Coombs.pdf" download className="btn bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-2 rounded">Get My CV</a>
-          <a href="https://github.com/Coder-Jon014" target="_blank" rel="noreferrer" className="btn bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-2 rounded">See My Work</a>
+        <div className="btn-box flex flex-wrap justify-center gap-4 mb-8">
+          <a href="/Jon-Daniel Coombs.pdf" download className="btn bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-6 rounded whitespace-nowrap">Get My CV</a>
+          <a href="https://github.com/Coder-Jon014" target="_blank" rel="noreferrer" className="btn bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-6 rounded whitespace-nowrap">See My Work</a>
         </div>
 
         <div className="home-sci flex justify-center gap-4">

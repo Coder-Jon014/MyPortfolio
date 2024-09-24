@@ -11,8 +11,8 @@ const Home = () => {
         </p>
 
         <div className="btn-box flex flex-col sm:flex-row justify-center gap-4 mb-8">
-          <a href="/Jon-Daniel Coombs.pdf" download className="btn bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Get My CV</a>
-          <a href="https://github.com/Coder-Jon014" target="_blank" rel="noreferrer" className="btn bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded">See My Work</a>
+          <a href="/Jon-Daniel Coombs.pdf" download className="btn bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-2 rounded">Get My CV</a>
+          <a href="https://github.com/Coder-Jon014" target="_blank" rel="noreferrer" className="btn bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-2 rounded">See My Work</a>
         </div>
 
         <div className="home-sci flex justify-center gap-4">

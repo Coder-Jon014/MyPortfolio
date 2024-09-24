@@ -6,14 +6,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from 'gsap/all';
 import Lenis from '@studio-freight/lenis'
 import SplitType from 'split-type'
-import  ExpandLessIcon  from '@mui/icons-material/ExpandLess';
-import { Fab } from '@mui/material';
+// import  ExpandLessIcon  from '@mui/icons-material/ExpandLess';
+// import { Fab } from '@mui/material';
 import Header from './Sections/Header'; 
 import Home from './Sections/Home'; 
-import Project from './Sections/Project';
+// import Project from './Sections/Project';
 import Quote from './Sections/Quote';
-import About from './Sections/About';
-import Contact from './Sections/Contact';
+// import About from './Sections/About';
+// import Contact from './Sections/Contact';
 
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -245,19 +245,19 @@ document.addEventListener('DOMContentLoaded', function() {
   requestAnimationFrame(raf)
 });
 
-const styles = {
-  goToTopButton: {
-    position: 'fixed',
-    bottom: '20px',
-    right: '20px',
-    zIndex: 1000, // To ensure it's above other content
-    // color: 'white', // Set the color to white
-  },
-};
+// const styles = {
+//   goToTopButton: {
+//     position: 'fixed',
+//     bottom: '20px',
+//     right: '20px',
+//     zIndex: 1000, // To ensure it's above other content
+//     // color: 'white', // Set the color to white
+//   },
+// };
 
-const scrollToTop = () => {
-  gsap.to(window, { duration: 1, scrollTo: { y: 0 } });
-};
+// const scrollToTop = () => {
+//   gsap.to(window, { duration: 1, scrollTo: { y: 0 } });
+// };
 
 
 function App() {
